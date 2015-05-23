@@ -12,8 +12,8 @@
   <p class="alert"><%= alert %></p>
 
   <%= link_to "sign_out", destroy_user_session_path, method: :DELETE  if current_user %>
-  <%= link_to "login", new_user_session_path %> / 
-  <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "login", new_user_session_path unless current_user %> / 
+  <%= link_to "Sign up", new_user_registration_path unless current_user %>
   
 
 
