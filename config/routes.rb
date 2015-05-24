@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   resources :posts
   devise_for :users
   # get 'home/index'
