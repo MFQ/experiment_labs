@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  use_doorkeeper
+  use_doorkeeper do 
+    controllers :applications => "customiztion_applications"
+  end
   resources :posts
   devise_for :users
   # get 'home/index'
